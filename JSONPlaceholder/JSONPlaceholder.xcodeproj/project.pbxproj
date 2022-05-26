@@ -16,6 +16,12 @@
 		88BCD352283F1B6100958FBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88BCD350283F1B6100958FBC /* LaunchScreen.storyboard */; };
 		88E52462283F2AA2004C09DA /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E52460283F2AA2004C09DA /* PostTableViewCell.swift */; };
 		88E52463283F2AA2004C09DA /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E52461283F2AA2004C09DA /* PostTableViewCell.xib */; };
+		88E52467283F2F2F004C09DA /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E52466283F2F2F004C09DA /* Post.swift */; };
+		88E5246B283F3005004C09DA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E5246A283F3005004C09DA /* NetworkManager.swift */; };
+		88E5246D283F3D96004C09DA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E5246C283F3D96004C09DA /* DetailViewController.swift */; };
+		88E52470283F3EA4004C09DA /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E5246E283F3EA4004C09DA /* CommentTableViewCell.swift */; };
+		88E52471283F3EA4004C09DA /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E5246F283F3EA4004C09DA /* CommentTableViewCell.xib */; };
+		88E52473283F4CC6004C09DA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E52472283F4CC6004C09DA /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,12 @@
 		88BCD353283F1B6100958FBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88E52460283F2AA2004C09DA /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		88E52461283F2AA2004C09DA /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
+		88E52466283F2F2F004C09DA /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		88E5246A283F3005004C09DA /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		88E5246C283F3D96004C09DA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		88E5246E283F3EA4004C09DA /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		88E5246F283F3EA4004C09DA /* CommentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
+		88E52472283F4CC6004C09DA /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		8E80414C7DC8D6B78DE27194 /* Pods_JSONPlaceholder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONPlaceholder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BEEC092D2354004A7D6456 /* Pods-JSONPlaceholder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONPlaceholder.release.xcconfig"; path = "Target Support Files/Pods-JSONPlaceholder/Pods-JSONPlaceholder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +98,8 @@
 			children = (
 				88BCD345283F1B6100958FBC /* AppDelegate.swift */,
 				88BCD347283F1B6100958FBC /* SceneDelegate.swift */,
+				88E52469283F2FEA004C09DA /* Network */,
+				88E52465283F2EBA004C09DA /* Model */,
 				88E5245F283F2A8B004C09DA /* View */,
 				88E5245E283F1E63004C09DA /* ViewControllers */,
 				88BCD34B283F1B6100958FBC /* Main.storyboard */,
@@ -100,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				88BCD349283F1B6100958FBC /* ViewController.swift */,
+				88E5246C283F3D96004C09DA /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -109,8 +124,27 @@
 			children = (
 				88E52460283F2AA2004C09DA /* PostTableViewCell.swift */,
 				88E52461283F2AA2004C09DA /* PostTableViewCell.xib */,
+				88E5246E283F3EA4004C09DA /* CommentTableViewCell.swift */,
+				88E5246F283F3EA4004C09DA /* CommentTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		88E52465283F2EBA004C09DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88E52466283F2F2F004C09DA /* Post.swift */,
+				88E52472283F4CC6004C09DA /* Comment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		88E52469283F2FEA004C09DA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				88E5246A283F3005004C09DA /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +211,7 @@
 				88BCD34F283F1B6100958FBC /* Assets.xcassets in Resources */,
 				88BCD34D283F1B6100958FBC /* Main.storyboard in Resources */,
 				88E52463283F2AA2004C09DA /* PostTableViewCell.xib in Resources */,
+				88E52471283F3EA4004C09DA /* CommentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,10 +264,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E5246B283F3005004C09DA /* NetworkManager.swift in Sources */,
 				88BCD34A283F1B6100958FBC /* ViewController.swift in Sources */,
 				88BCD346283F1B6100958FBC /* AppDelegate.swift in Sources */,
+				88E52470283F3EA4004C09DA /* CommentTableViewCell.swift in Sources */,
 				88BCD348283F1B6100958FBC /* SceneDelegate.swift in Sources */,
 				88E52462283F2AA2004C09DA /* PostTableViewCell.swift in Sources */,
+				88E52467283F2F2F004C09DA /* Post.swift in Sources */,
+				88E52473283F4CC6004C09DA /* Comment.swift in Sources */,
+				88E5246D283F3D96004C09DA /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

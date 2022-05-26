@@ -20,4 +20,15 @@ class NetworkManager {
             complitionHander(posts)
         }
     }
+    
+    func getCommentsBy(_ postID: Int, complitionHandler: @escaping ([Comment]) -> Void) {
+        let request = AF.request(baseURL + "posts/\(postID)/comments")
+        
+        request.responseDecodable(of: [Comment].self) { response in
+            guard let comments = response.value else { return }
+            complitionHandler(comments)
+        }
+            
+    }
 }
+    

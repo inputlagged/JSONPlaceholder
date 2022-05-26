@@ -20,12 +20,14 @@ class ViewController: UIViewController {
     }
     
     var networkManager = NetworkManager()
-    
+
     var posts: [Post] = [] {
         didSet {
             postTableView.reloadData()
         }
     }
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +41,16 @@ class ViewController: UIViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = posts[indexPath.row]
+        if let detailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailViewControllerID") as? DetailViewController {
+            detailVC.selectedPost = post
+            navigationController?.pushViewController(detailVC, animated: true)
+        }
         
+       
     }
+    
+
 }
 
 
