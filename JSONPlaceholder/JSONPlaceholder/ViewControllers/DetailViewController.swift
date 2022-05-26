@@ -31,21 +31,19 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if let selectedPost = selectedPost {
             networkManager.getCommentsBy(selectedPost.id) { comments in
                 DispatchQueue.main.async {
                     self.comments = comments
                 }
             }
-            print(selectedPost.title)
             self.detailTitleLabel.text = selectedPost.title
             self.detailBodyLabel.text = selectedPost.body
         }
-        
     }
 }
 
+// MARK: Delegate, DataSource
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return comments.count

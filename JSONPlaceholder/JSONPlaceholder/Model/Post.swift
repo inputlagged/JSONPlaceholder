@@ -7,9 +7,9 @@
 
 import Foundation
 
-class Post: Decodable {
-    var userId: Int
-    var id: Int
-    var title: String
-    var body: String
+struct Post: Decodable {
+    let userId: Int
+    let id: Int
+    let title: String
+    let body: String
 }

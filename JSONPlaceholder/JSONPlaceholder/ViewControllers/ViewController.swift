@@ -27,17 +27,13 @@ class ViewController: UIViewController {
         }
     }
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         networkManager.getAllPosts { posts in
             DispatchQueue.main.async {
                 self.posts = posts
             }
         }
-        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -46,13 +42,8 @@ class ViewController: UIViewController {
             detailVC.selectedPost = post
             navigationController?.pushViewController(detailVC, animated: true)
         }
-        
-       
     }
-    
-
 }
-
 
 // MARK: Delegate, DataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {

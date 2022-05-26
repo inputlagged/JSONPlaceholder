@@ -7,10 +7,10 @@
 
 import Foundation
 
-class Comment: Decodable {
-    var postId: Int
-    var id: Int
-    var name: String
-    var email: String
-    var body: String
+struct Comment: Decodable {
+    let postId: Int
+    let id: Int
+    let name: String
+    let email: String
+    let body: String
 }
